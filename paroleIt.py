@@ -4,9 +4,9 @@ print("This is a password generator.")
 
 new_parole_length = int(input("Enter a length of your new password: "))
 
-if new_parole_length < 8:           
+if new_parole_length < 10:           
     print("Your password will be too easy. Try again.")             
-elif new_parole_length > 12:        
+elif new_parole_length > 15:        
     print("It's not necessary to set up such long password. Try again.")        
 else:        
     print("OK, let's do it!")
