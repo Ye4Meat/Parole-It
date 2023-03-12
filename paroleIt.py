@@ -1,5 +1,6 @@
 import random
 from tkinter import *
+import tkinter.messagebox
 
 # Creating main class
 class Application(Frame):
@@ -28,7 +29,10 @@ class Application(Frame):
 
 # Reveal module
     def reveal(self):
-        contents = int(self.pwlen_ent.get())
+        try:
+            contents = int(self.pwlen_ent.get())
+        except:
+            tkinter.messagebox.showinfo("Error", "You need enter a number")
 
         if contents < 10:
             message = "Your password will be too easy. Try again"
